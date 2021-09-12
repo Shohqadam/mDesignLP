@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=Allison&family=Anton&family=Balsamiq+Sans:wght@700&family=Expletus+Sans:wght@600&family=Inknut+Antiqua:wght@300&family=Playfair+Display:ital@1&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,html {
+    font-family: sans-serif;
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 20px;
+    font-weight: 400;
+    display:inline-block;
+}
+.item__link::after{
+    content: '';
+    width: 0;
+    height:3px;
+    display:block;
+    background: #000;
+    transition: width .3s ease;
+}
+.item__link:hover::after{
+    width:100%;
+    transition: width .3s ease;
+}
+
+.burgers{
+    width:30px;
+    display: none;
+}
+.burger{
+    width:100%;
+    height:2px;
+    background: #000;
+    border-radius: 5px;
+    margin: 3px 0;
+    transition: width .3s ease;
+}
+.burger1{
+    width:30%;
+}
+.burger2{
+    width:65%;
+}
+.burgers:hover .burger{
+    width:100%;
+}
+
+p {
+    font-weight: 50;
+    line-height: 40px;
+}
+
+.container {
+    width: 70%;
+    margin: auto;
+}
+
+.line {
+    width: 2rem;
+    height: 4px;
+    background: #222;
+    border-radius: 3px;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.line_light {
+    background-color: #fff
+}
+
+.button {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: .6rem;
+    display: inline-block;
+}
+
+.button_dark {
+    color: #fff;
+    background-color: #333;
+}
+
+.button_light {
+    color: #333;
+    background-color: #fff;
+}
+
+span {
+    color: #1FD836
+}
+
+/*		=============		HEADER 			==============		*/
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    color: #333;
+    width:80%;
+    margin: auto;
+}
+
+.list_items,
+li {
+    display: flex;
+    list-style-type: none;
+    text-transform: capitalize;
+    padding: 10px;
+}
+
+.logo {
+    padding: 10px;
+    font-weight: 800;
+}
+
+/*			==================   SIDEBAR 	============ 			*/
+
+.sidebar {
+    background-color: #222;
+    color: #fff;
+    padding: 4rem 0 4rem 0
+}
+
+.sidebar p {
+    width: 60%;
+}
+
+
+/*		======================			Experience ================			*/
+
+.exp_desc {
+    margin-top: 3rem;
+
+}
+
+.we_do {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.do {
+    width: 30%;
+    margin-right: 2rem;
+}
+
+/*			==================== 		Brands 		===========			*/
+
+.brands {
+    background: #222;
+    color: #fff;
+    margin-top: 3rem;
+}
+
+.built_desc {
+    padding-top: 4rem;
+}
+
+.brand_items {
+    display: flex;
+    align-items: center;
+}
+
+.brand_item {
+    padding: 20px 30px 20px 0;
+}
+
+/*				==============     Galery 		=============		*/
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.row > * {
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 100%;
+}
+
+.col-md-6 {
+    flex: 0 0 auto;
+    width: 45%;
+    margin: 1rem .5rem;
+    /* padding: 20px; */
+}
+
+.galery_img {
+    width: 100%;
+    height: 15rem;
+    background: #666;
+    color: #fff
+}
+.galery_img img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}
+
+/*		=================         FOOTER 	=================			*/
+
+footer {
+    text-align: center;
+    color: #fff;
+}
+
+.upper_footer {
+    background: linear-gradient(to left, #0080D9, #02C1F7);
+    padding: 30px;
+}
+
+.lower_footer {
+    background: #222;
+    padding: 30px;
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+}
+
+.socials a {
+    color: #fff;
+}
+
+
+
+/*		=================         MEDIA 	=================			*/
+
+
+@media (max-width: 900px) {
+    body {
+        text-align: center;
+    }
+
+    .list_items,
+    li{
+        display: flex;
+        flex-direction: row;
+        width:100%;
+        display:none;
+    }
+
+    .header{
+        width:100%;
+        display:grid;
+        justify-items:center;
+        grid-template-columns: 1fr 1fr;
+    }
+    .burgers{
+        display:block;
+    }
+    .header__active{
+        width:100%;
+        display:grid;
+        justify-items:center;
+        grid-template-columns: 1fr 1fr;
+    }
+    .header__active .list_items,li{
+        display:inherit;
+    }
+    .sidebar p {
+        width: 100%;
+    }
+
+    .lit_line {
+        width: 100%;
+    }
+
+    .line {
+        margin: 2rem auto;
+    }
+
+    .do{
+        width:100%;
+        margin-top: 40px;
+    }
+
+    .brand_items {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .brand_item {
+        padding: 0;
+    }
+
+    .row {
+        text-align: left;
+        display: inherit;
+    }
+    .col-md-6{
+        width: 100%;
+    }
+
+    .do p {
+        line-height: 30px;
+    }
+}
